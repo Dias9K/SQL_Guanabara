@@ -1,2 +1,1 @@
--- Active: 1714275088660@@127.0.0.1@3306@teste
-SELECT * FROM teste;
+DROP DATABASE teste;
