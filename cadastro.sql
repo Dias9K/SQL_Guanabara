@@ -24,6 +24,7 @@ CREATE TABLE pessoas (
 ) DEFAULT CHARSET = utf8;
 -- configuração de caracteres utf-8 padrão
 
+-- inserindo dados na tabela (INSERT INTO)
 INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade)
 -- inserindo valores nas rescpectivas colunas
 VALUES ('Manuel', '1996-06-09', 'M', '60.9', '1.69', 'Portugal'),
@@ -38,3 +39,13 @@ SELECT * from pessoas;
 
 -- DDL (Data Definition Language) CREATE DATABASE; CREATE TABLE
 -- DML (Data Maniputalation Language) INSERT INTO;
+
+
+-- alterando estrutura da tabela (ALTER TABLE e DROP TABLE)
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10);
+-- adiciona uma nova coluna na tabela
+
+ALTER TABLE pessoas
+DROP COLUMN profissao;
+-- deleta uma coluna da tabela
