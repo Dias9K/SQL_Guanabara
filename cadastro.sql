@@ -23,3 +23,4 @@ CREATE TABLE pessoas (
 ) DEFAULT CHARSET = utf8;
 -- configuração de caracteres utf-8 padrão
 SELECT * FROM pessoas;
+DROP DATABASE cadastro;
