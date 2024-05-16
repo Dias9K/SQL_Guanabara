@@ -49,3 +49,7 @@ ADD COLUMN profissao VARCHAR(10);
 ALTER TABLE pessoas
 DROP COLUMN profissao;
 -- deleta uma coluna da tabela
+
+-- adiciona a coluna depois da coluna de nomes
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10) AFTER nome;
