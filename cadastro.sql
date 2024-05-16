@@ -4,6 +4,7 @@ DEFAULT COLLATE utf8_general_ci;
 -- criação do banco de dados com os padrões de caractere e collation UTF-8
 USE cadastro;
 -- utilização do banco de dados
+
 CREATE TABLE pessoas (
     id int NOT NULL AUTO_INCREMENT,
     -- AUTO_INCREMENT = automaticamente vai ser preenchido
@@ -22,5 +23,10 @@ CREATE TABLE pessoas (
     -- a chave primária será a coluna "id"
 ) DEFAULT CHARSET = utf8;
 -- configuração de caracteres utf-8 padrão
-SELECT * FROM pessoas;
-DROP DATABASE cadastro;
+
+INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade)
+VALUES ('Jodofredo', '1984-01-02', 'M', '60.5', '1.60', 'Brasil'),
+('Manuel', '1996-06-09', 'M', '60.9', '1.69', 'Portugal'),
+('Maria', '1969-09-06', 'F', '60.8', '1.96', 'Portugal');
+
+SELECT * from pessoas;
