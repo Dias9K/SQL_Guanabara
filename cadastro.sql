@@ -25,8 +25,16 @@ CREATE TABLE pessoas (
 -- configuração de caracteres utf-8 padrão
 
 INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade)
-VALUES ('Jodofredo', '1984-01-02', 'M', '60.5', '1.60', 'Brasil'),
-('Manuel', '1996-06-09', 'M', '60.9', '1.69', 'Portugal'),
+-- inserindo valores nas rescpectivas colunas
+VALUES ('Manuel', '1996-06-09', 'M', '60.9', '1.69', 'Portugal'),
 ('Maria', '1969-09-06', 'F', '60.8', '1.96', 'Portugal');
 
+INSERT INTO pessoas VALUES (DEFAULT, 'Jodofredo', '1984-01-02', 'M', '60.5', '1.60', 'Brasil');
+-- caso os valores estejam na mesma ordem da estrutura da tabela, não é necessário especificar as colunas que os valores serão inseridos
+-- CONTUDO, apesar de coluna id ser auto incrementada, a linguagem necessita de um valor para inserir, colocando 'DEFAULT' é considerado
+--o auto incremento da coluna que foi criado anteriormente
+
 SELECT * from pessoas;
+
+-- DDL (Data Definition Language) CREATE DATABASE; CREATE TABLE
+-- DML (Data Maniputalation Language) INSERT INTO;
